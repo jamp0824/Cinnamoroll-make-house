@@ -47,10 +47,3 @@ npx vercel pull --yes --environment=production
 npx vercel build --prod
 npx vercel deploy --prebuilt --prod
 ```
-
-## Vercel deployment troubleshooting
-
-- If Vercel blocks deployment with `Error: Vulnerable version of Next.js detected`, upgrade `next` to a patched version listed by the Next.js security advisory (for CVE-2025-66478).
-- This repository is pinned to `next@15.5.7`, which is one of the documented fixed versions.
-- If logs still show an older version (such as `15.1.6`), verify the Vercel project is deploying the latest `main` commit SHA.
-- Build telemetry is disabled in CI via `NEXT_TELEMETRY_DISABLED=1` to keep logs focused on build/deploy outcomes.
